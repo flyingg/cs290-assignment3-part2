@@ -1,0 +1,59 @@
+Gerald Gale - Log for Assignment3 PArt 1
+
+Start: Sun, 1 Feb 2015 19:00:00 -0800
+End: Sun, 1 Feb 2015 21:31:27 -0800
+Tasks: Finished linting with jslint.com for all three files, has someissues the messageLog.prototypes - I don't know if it was due to settings
+
+Start: Sat, 31 Jan 2015 20:00:00 -0800
+End: Sun, 1 Feb 2015 00:27:24 -0800
+Tasks: Modified log.txt
+
+Start: Sat, 31 Jan 2015 20:00:00 -0800
+End: Sun, 1 Feb 2015 00:26:01 -0800
+Tasks: done with all three files, added name to the top of each. Still need to Lint files, will do that tomorrow. It's getting late.
+
+Start: Sat, 31 Jan 2015 20:00:00 -0800
+End: Sat, 31 Jan 2015 00:12:45 -0800
+Tasks: Half way done with objects.js
+
+Start: Sat, 31 Jan 2015 20:00:00 -0800
+End: Sat, 31 Jan 2015 23:40:21 -0800
+Tasks: Done with functions.js - start working on objects.js
+
+Start: Sat, 31 Jan 2015 20:00:00 -0800
+End: Sat, 31 Jan 2015 23:24:14 -0800
+Tasks: Almost done with functions.js, still working on parseGit for checking the start of the commit message.
+
+Start: Sat, 31 Jan 2015 20:00:00 -0800
+End: Sat, 31 Jan 2015 22:03:26 -0800
+Tasks: Made first initial change to functions.js for the night. Spent most time so far reading up and studying JS
+
+Start: Thu, 29 Jan 2015 18:00:00 -0800
+End: Fri, 30 Jan 2015 00:58:42 -0800
+Tasks: Need to finish parsGit() in functions.js - started objects.js
+
+Start: Thu, 29 Jan 2015 18:00:00 -0800
+End: Fri, 30 Jan 2015 00:09:45 -0800
+Tasks: 2/3 of the way done w/ functions.js
+
+Start: Thu, 29 Jan 2015 18:00:00 -0800
+End: Thu, 29 Jan 2015 23:23:17 -0800
+Tasks: Started working on functions.js
+
+Start: Thu, 29 Jan 2015 18:00:00 -0800
+End: Thu, 29 Jan 2015 22:50:20 -0800
+Tasks: Finally completed at least one file for correct assertions - variables.js
+
+Start: Thu, 29 Jan 2015 18:00:00 -0800
+End: Thu, 29 Jan 2015 22:09:11 -0800
+Tasks: Made first successful test in variable.js, doing more work making sure log is documented as expected 
+
+Start: Thu, 29 Jan 2015 18:00:00 -0800
+End: Thu, 29 Jan 2015 20:19:26 -0800
+Tasks: Checking to make sure log is working, made slight modification to src/variables.js
+
+Start: Wed, 28 Jan 2015 19:00:00 -0800
+End: Wed, 28 Jan 2015 21:39:03 -0800
+Tasks: add the stock files from Basic-JavaScript HW Winter 2015 github repository
+
+Amended Log for Assignment3 Part2 Section 
