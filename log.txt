@@ -58,3 +58,52 @@ Tasks: add the stock files from Basic-JavaScript HW Winter 2015 github repositor
 
 Amended Log for Assignment3 Part2 Section 
 *NOTE* This is a separate log from here down for part 2 of assignment3
+
+Start: Wed, 4 Feb 2015 20:23:14 18:00:00
+
+End: Wed, 4 Feb 2015 21:52:11 -0800 
+
+Tasks: Added two other languages to the serach field - HTML & CSS
+
+
+Start: Wed, 4 Feb 2015 20:23:14 18:00:00 
+
+End: Wed, 4 Feb 2015 21:44:04 -0800 
+
+Tasks: Renamed files, they were not named correctly
+
+
+Start: Wed, 4 Feb 2015 20:23:14 18:00:00 
+
+End: Wed, 4 Feb 2015 21:40:28 -0800 
+
+Tasks: Finally completed working cs290assignment2Part2 - Just realized I need to change the name of the file
+
+
+Start: Wed, 4 Feb 2015 20:23:14 18:00:00 
+
+End: Wed, 4 Feb 2015 20:23:14 -0800 
+
+Tasks: Add blank javasctipt file, will be worked on
+
+
+Start: Tue, 3 Feb 2015 18:00:00 
+
+End: Tue, 3 Feb 2015 23:53:23 -0800 
+
+Tasks: Edited log.txt file - test push to github
+
+
+Start: Tue, 3 Feb 2015 18:00:00 
+
+End: Tue, 3 Feb 2015 23:49:37 -0800 
+
+Tasks: Accompanying log.txt file is added
+
+
+Start: Tue, 3 Feb 2015 18:00:00 
+
+End: Tue, 3 Feb 2015 23:48:17 -0800 
+
+Tasks: Add template HTML file, make appropriate .js file
+

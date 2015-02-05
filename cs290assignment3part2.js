@@ -8,85 +8,67 @@ var searchPython = false;
 var searchJSON = false;
 var searchJavaScript = false;
 var searchSQL = false;
-var searchHTML = false;
-var searchCSS = false;
 
 /*Handle the number of pages selected*/
 function HandleSelection(selection) {
   numberOfPagesToDisplay = selection.options[selection.selectedIndex].value;
-};
+}
 
 /*Handle check bock input on site for Python*/
 function ClickedPython(box) {
-  if (box.checked == true) {
+  if (box.checked === true) {
     searchPython = true;
   } else {
     searchPython = false;
   }
-};
+}
 
 /*Handle check bock input on site for JSON*/
 function ClickedJSON(box) {
-  if (box.checked == true) {
+  if (box.checked === true) {
     searchJSON = true;
   } else {
     searchJSON = false;
   }
-};
+}
 
 /*Handle check bock input on site for JavaScript*/
 function ClickedJavaScript(box) {
-  if (box.checked == true) {
+  if (box.checked === true) {
     searchJavaScript = true;
   } else {
     searchJavaScript = false;
   }
-};
+}
 
 /*Handle check bock input on site for SQL*/
 function ClickedSQL(box) {
-  if (box.checked == true) {
+  if (box.checked === true) {
     searchSQL = true;
   } else {
     searchSQL = false;
   }
-};
-
-/*Handle check bock input on site for HTML*/
-function ClickedHTML(box) {
-  if (box.checked == true) {
-    searchHTML = true;
-  } else {
-    searchHTML = false;
-  }
-};
-
-/*Handle check bock input on site for CSS*/
-function ClickedCSS(box) {
-  if (box.checked == true) {
-    searchCSS = true;
-  } else {
-    searchCSS = false;
-  }
-};
+}
 
 /*Method to clears the old list of sites before new search*/
-function ClearList(){
+function ClearList() {
   var resultsList = document.getElementById("resultsDiv");
   while (resultsList.hasChildNodes()) {
     resultsList.removeChild(resultsList.firstChild);
   }
-};
+}
 
 /*Reset number counts to for accurate listied of results*/
-function SetNumberCountToZero(){
+function SetNumberCountToZero() {
   totalNumbers = 0;
   pageNumber = 0;
-};
+}
 
 /*Method loops to get the right number of gists*/
-function GetNumberOfPagesToDisplay(){
-  for (var i = 0; i < numberOfPagesToDisplay; i++) {
+function GetNumberOfPagesToDisplay() {
+  var i = 0;
+
+  for (i = 0; i < numberOfPagesToDisplay; i++) {
     urlSource = "https://api.github.com/gists?page=" + i + "&per_page=30";
     GetGistSearchResults(); 
   }
@@ -97,7 +79,7 @@ function SearchButtonResults() {
   ClearList();
   SetNumberCountToZero();
   GetNumberOfPagesToDisplay();
-};
+}
 
 /*Does the heavy lifting sending/receiving xml data from github
 This method also parses the results before readable formatting*/
@@ -133,20 +115,14 @@ function GetGistSearchResults() {
           if (searchSQL == true && files[j].language == "SQL") {
             FormatResults(results[i].html_url, results[i].description, files[j].filename, files[j].language);
           }
-          if (searchHTML == true && files[j].language == "HTML") {
-            FormatResults(results[i].html_url, results[i].description, files[j].filename, files[j].language);
-          }
-          if (searchCSS == true && files[j].language == "CSS") {
-            FormatResults(results[i].html_url, results[i].description, files[j].filename, files[j].language);
-          }
-          if (searchPython == false && searchJSON == false && searchJavaScript == false && searchSQL == false && searchHTML == false && searchCSS == false) {
+          if (searchPython == false && searchJSON == false && searchJavaScript == false && searchSQL == false) {
             FormatResults(results[i].html_url, results[i].description, files[j].filename, files[j].language);
           }
         }
       }
     }
   }
-};
+}
 
 /*Formats parsed string for the display on the website. Conatins HTML code for scripting*/
 function FormatResults(html_url, description, filename, language) {
@@ -172,7 +148,7 @@ function FormatResults(html_url, description, filename, language) {
   if (isAlreadyInFavorites == false) {
     document.getElementById("resultsDiv").innerHTML += formattedString;
   }
-};
+}
 
 /*Adds selected results to the favoritesDiv - removes them from results list*/
 function AddToFavorites() {
@@ -203,7 +179,7 @@ function AddToFavorites() {
     }
   }
   RemoveFromResults();
-};
+}
 
 /*Removes checked item in the favoritesDiv*/
 function RemoveFromResults() {
@@ -224,19 +200,21 @@ function RemoveFromResults() {
       }
     }
   }
-};
+}
 
 /*Remove item from fravorites list thile favoritvesDiv contains items - uses local storage*/
 function RemoveFromFavorites() {
   var doc = document.getElementById("favoritesDiv");
   var isChecked;
   var setExit = false;
+  var i = 0;
+  var j = 0;
 
   while (doc.hasChildNodes() && setExit == false) {
-    for (var x = 0; x < doc.childNodes.length; x++) {
-      isChecked = doc.childNodes[x].childNodes[0].checked;
+    for (var j = 0; j < doc.childNodes.length; j++) {
+      isChecked = doc.childNodes[j].childNodes[0].checked;
       if (isChecked == true) {
-        doc.removeChild(doc.childNodes[x]);
+        doc.removeChild(doc.childNodes[j]);
         setExit = false;
         break;
       } else {
@@ -248,13 +226,13 @@ function RemoveFromFavorites() {
   localStorage.clear();
   var tempFavString = "EmptyString";
 
-  for (var y = 0; y < doc.childNodes.length; y++) {
-    var output = new XMLSerializer().serializeToString(doc.childNodes[y]);
+  for (i; i < doc.childNodes.length; i++) {
+    var output = new XMLSerializer().serializeToString(doc.childNodes[i]);
     tempFavString = tempFavString + output;
     tempFavString = tempFavoriteString.replace("EmptyString", "");
   }
   localStorage.setItem("favorites", tempFavString);
-};
+}
 
 /*Fills favoriites list using local storage*/
 function FillFavorites() {
@@ -262,7 +240,7 @@ function FillFavorites() {
     var storedString = localStorage.getItem("favorites");
     document.getElementById("favoritesDiv").innerHTML = storedString;
   }
-};
+}
 
 /*Remove all favorite listings by clearing local storage*/
 function RemoveAllFromFavorites() {
@@ -273,4 +251,4 @@ function RemoveAllFromFavorites() {
   if (typeof (Storage) !== "undefined") {
     localStorage.clear();
   }
-};
+}
