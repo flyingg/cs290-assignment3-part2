@@ -8,6 +8,8 @@ var searchPython = false;
 var searchJSON = false;
 var searchJavaScript = false;
 var searchSQL = false;
+var searchHTML = false;
+var searchCSS = false;
 
 /*Handle the number of pages selected*/
 function HandleSelection(selection) {
@@ -47,6 +49,24 @@ function ClickedSQL(box) {
     searchSQL = true;
   } else {
     searchSQL = false;
+  }
+};
+
+/*Handle check bock input on site for HTML*/
+function ClickedHTML(box) {
+  if (box.checked == true) {
+    searchHTML = true;
+  } else {
+    searchHTML = false;
+  }
+};
+
+/*Handle check bock input on site for CSS*/
+function ClickedCSS(box) {
+  if (box.checked == true) {
+    searchCSS = true;
+  } else {
+    searchCSS = false;
   }
 };
 
@@ -113,7 +133,13 @@ function GetGistSearchResults() {
           if (searchSQL == true && files[j].language == "SQL") {
             FormatResults(results[i].html_url, results[i].description, files[j].filename, files[j].language);
           }
-          if (searchPython == false && searchJSON == false && searchJavaScript == false && searchSQL == false) {
+          if (searchHTML == true && files[j].language == "HTML") {
+            FormatResults(results[i].html_url, results[i].description, files[j].filename, files[j].language);
+          }
+          if (searchCSS == true && files[j].language == "CSS") {
+            FormatResults(results[i].html_url, results[i].description, files[j].filename, files[j].language);
+          }
+          if (searchPython == false && searchJSON == false && searchJavaScript == false && searchSQL == false && searchHTML == false && searchCSS == false) {
             FormatResults(results[i].html_url, results[i].description, files[j].filename, files[j].language);
           }
         }
