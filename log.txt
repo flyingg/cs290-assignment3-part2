@@ -56,8 +56,16 @@ Start: Wed, 28 Jan 2015 19:00:00 -0800
 End: Wed, 28 Jan 2015 21:39:03 -0800
 Tasks: add the stock files from Basic-JavaScript HW Winter 2015 github repository
 
+*****************************************
 Amended Log for Assignment3 Part2 Section 
 *NOTE* This is a separate log from here down for part 2 of assignment3
+*****************************************
+
+Start: 
+Wed, 4 Feb 2015 18:00:00 
+End: Wed, 4 Feb 2015 23:30:12 -0800 
+
+Tasks: Had a few problems try to expand more features in .js file. will cubmit as is. Covers the requirements. Need to move on to php assignment
 
 Start: Wed, 4 Feb 2015 20:23:14 18:00:00
 
